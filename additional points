@@ -1,0 +1,72 @@
+1. vector<vector<int>> v;
+
+Declares an empty 2D vector v.
+
+No rows or columns initially.
+
+You will have to add rows manually later (using push_back, etc).
+
+✅ Example:
+
+vector<vector<int>> v;
+v.push_back({1, 2, 3});
+v.push_back({4, 5});
+
+
+Now v = {{1, 2, 3}, {4, 5}}.
+
+2. vector<vector<int>> v(m);
+
+Creates a 2D vector with m rows, but each row is empty.
+
+Each row is a vector<int> with size 0.
+
+✅ Example:
+
+vector<vector<int>> v(3);
+
+
+Here v has 3 rows → [[], [], []].
+
+You can later add values like:
+
+v[0].push_back(10);
+v[1].push_back(20);
+
+3. vector<vector<int>> v(m, vector<int>(n));
+
+Creates a 2D vector with m rows.
+
+Each row is a vector of size n, filled with 0 by default (since int default = 0).
+
+✅ Example:
+
+vector<vector<int>> v(3, vector<int>(4));
+
+
+This makes a 3×4 matrix filled with 0:
+
+[
+ [0, 0, 0, 0],
+ [0, 0, 0, 0],
+ [0, 0, 0, 0]
+]
+
+4. vector<vector<int>> v(m, vector<int>(n, k));
+
+Creates a 2D vector with m rows.
+
+Each row has size n, initialized with the value k.
+
+✅ Example:
+
+vector<vector<int>> v(3, vector<int>(4, 7));
+
+
+This makes a 3×4 matrix filled with 7:
+
+[
+ [7, 7, 7, 7],
+ [7, 7, 7, 7],
+ [7, 7, 7, 7]
+]
